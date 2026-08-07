@@ -1,0 +1,49 @@
+.rv-hero {
+  padding: 48px 24px 40px;
+  background: radial-gradient(600px 300px at 80% -10%, rgba(37,99,235,.1), transparent 60%), var(--l-paper);
+}
+.rv-hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
+.rv-hero h1 { font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 600; margin-bottom: 14px; }
+
+.rv-hero-photo { position: relative; display: flex; justify-content: center; }
+.rv-hero-photo img {
+  position: relative; z-index: 1; max-width: 100%; max-height: 380px; width: auto;
+  filter: drop-shadow(0 20px 34px rgba(11,18,32,.14));
+}
+.rv-hero-photo-glow {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 300px; height: 300px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(232,168,58,.16), rgba(37,99,235,.12) 60%, transparent 75%);
+  filter: blur(10px);
+}
+
+@media (max-width: 800px) {
+  .rv-hero-grid { grid-template-columns: 1fr; }
+  .rv-hero-photo { order: -1; margin-bottom: 8px; }
+  .rv-hero-photo img { max-height: 260px; }
+}
+
+.rv-avg {  display: inline-flex; align-items: center; gap: 10px; margin-top: 16px;
+  background: #fff; border: 1px solid var(--l-border); border-radius: 30px;
+  padding: 8px 18px; font-size: 13.5px; color: var(--l-ink-soft); font-weight: 600;
+}
+
+.rv-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.rv-card {
+  background: #fff; border: 1px solid var(--l-border); border-radius: 16px; padding: 24px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.rv-card:hover { transform: translateY(-3px); box-shadow: 0 18px 40px rgba(11,18,32,.08); }
+.rv-card h3 { font-size: 15px; font-weight: 700; color: var(--l-ink); margin: 12px 0 8px; }
+.rv-card p { font-size: 13.5px; color: var(--l-ink-soft); line-height: 1.65; margin-bottom: 16px; }
+.rv-meta { display: flex; justify-content: space-between; font-size: 11.5px; color: #94a3b8; border-top: 1px solid var(--l-border); padding-top: 12px; }
+
+.rv-empty { text-align: center; padding: 60px 20px; color: var(--l-ink-soft); }
+.rv-empty h3 { color: var(--l-ink); margin: 10px 0 6px; }
+
+@media (max-width: 900px) {
+  .rv-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .rv-grid { grid-template-columns: 1fr; }
+}

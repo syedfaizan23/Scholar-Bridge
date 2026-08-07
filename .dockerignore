@@ -1,0 +1,22 @@
+# Never bake local data or secrets into the image
+backend/db.sqlite3
+backend/media/
+**/.env
+**/.env.*
+
+# Python
+**/__pycache__/
+**/*.pyc
+backend/staticfiles/
+
+# Node
+frontend-react/node_modules/
+frontend-react/build/
+
+# VCS / editor / OS cruft
+.git/
+.gitignore
+.vscode/
+.idea/
+*.log
+.DS_Store

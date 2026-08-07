@@ -1,0 +1,44 @@
+.cu-hero {
+  padding: 40px 24px 28px;
+  background: radial-gradient(600px 300px at 50% -10%, rgba(37,99,235,.1), transparent 60%), var(--l-paper);
+  text-align: center;
+}
+.cu-hero h1 { font-size: clamp(2rem, 3vw, 2.6rem); font-weight: 600; margin-bottom: 14px; }
+.cu-hero .l-lead { margin: 0 auto; text-align: center; }
+.cu-hero .l-eyebrow { justify-content: center; }
+
+.cu-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
+
+.cu-form-card {
+  background: #fff; border: 1px solid var(--l-border); border-radius: 18px;
+  padding: 32px; box-shadow: 0 20px 50px rgba(11,18,32,.06);
+}
+.cu-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.cu-field { margin-bottom: 16px; }
+.cu-field label { display: block; font-size: 12.5px; font-weight: 600; color: var(--l-ink); margin-bottom: 6px; }
+.cu-field input, .cu-field textarea {
+  width: 100%; padding: 10px 13px; border: 1.5px solid var(--l-border); border-radius: 9px;
+  font: inherit; font-size: 14px; outline: none; transition: border-color .15s ease; resize: vertical;
+}
+.cu-field input:focus, .cu-field textarea:focus { border-color: var(--l-brand); }
+.cu-err { display: block; font-size: 11.5px; color: #dc2626; margin-top: 4px; }
+
+.cu-success { text-align: center; padding: 30px 10px; }
+.cu-success-icon { font-size: 40px; display: block; margin-bottom: 12px; }
+.cu-success h3 { font-size: 1.3rem; margin-bottom: 8px; }
+.cu-success p { color: var(--l-ink-soft); margin-bottom: 20px; }
+
+.cu-info { display: flex; flex-direction: column; gap: 14px; }
+.cu-info-card {
+  display: flex; gap: 14px; align-items: flex-start; background: #fff; border: 1px solid var(--l-border);
+  border-radius: 14px; padding: 18px 20px;
+}
+.cu-info-icon { font-size: 22px; flex-shrink: 0; }
+.cu-info-card strong { display: block; font-size: 13.5px; color: var(--l-ink); margin-bottom: 3px; }
+.cu-info-card p { font-size: 13px; color: var(--l-ink-soft); line-height: 1.5; }
+.cu-info-card a { color: var(--l-brand); }
+
+@media (max-width: 800px) {
+  .cu-grid { grid-template-columns: 1fr; }
+  .cu-row { grid-template-columns: 1fr; }
+}
